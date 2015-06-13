@@ -5,20 +5,20 @@ body {
   font-family: $font-primary;
   font-size: 1.2rem;
   line-height: 160%;
-  background: $paleyellow;
-  color: $darkblue;
+  background: $darkblue;
+  color: $purple;
 }
 
 #{headings()} {
   font-family: $font-secondary;
   font-weight: normal;
-  color: $darkblue ;
+  color: $purple ;
   @include text-shadow($paleryellow 1px 1px);
 }
 
 h1 {
   font-size: 2.2rem;
-  color: lighten($purple , 25);
+  color: $purple;
   margin-bottom: .4rem;
   border-bottom: 1px solid $lightgray;
   padding-top: 10px;
@@ -39,7 +39,7 @@ h3 {
 
 a {
   text-decoration: underline;
-  color: $mediumgray;
+  color: $yellow;
   &:hover {
     color: $purple ;
   }

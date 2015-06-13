@@ -1,0 +1,103 @@
+//Susy setup ------------------------------------
+$total-columns        : 12;
+$column-width         : 4em;
+$gutter-width         : 1em;
+$grid-padding         : $gutter-width;
+
+@include border-box-sizing;
+
+$small                : 30em;
+$medium               : 47em;
+$large                : 75em;
+
+
+
+
+// Wrapper -----------------------------
+
+.wrapper {
+	@include container;
+	padding: 0 3%;
+}
+
+//header ------------------------------------
+header {
+  img {
+    width: 95%;
+    margin: 2.5%;
+    max-width: 500px;
+    margin-bottom: 0;
+  }
+
+  .hero {
+    width: 100%;
+    @include at-breakpoint($medium) {
+	@include single-transition(all, 1s, ease-out);
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 450px;
+      @include background(linear-gradient(bottom left, rgba($darkerblue, .6), rgba($darkerblue, 0)),image-url('misc/helper.jpg'));
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0 auto;
+
+      .branding {
+        position: absolute;
+        bottom: 0;
+      }
+
+    }
+  }
+
+}
+
+// Columns --------------------------------
+
+.columns {
+	width: 100%;
+	background: $blue;
+	clear: both;
+	
+	.col1 {
+		float: left;
+		height: 700px;
+		width: 10%;
+		max-width: 200px;
+		background: $orange;
+		padding: 0 3%;
+		margin: 0 3%;
+	}
+	.col2 {
+		float: left;
+		height: 700px;
+		width: 10%;
+		max-width: 200px;
+		background: $orange;
+		padding: 0 3%;
+		margin: 0 3%;
+	}
+	.col3 {
+		float: left;
+		height: 700px;
+		width: 10%;
+		max-width: 200px;
+		background: $orange;
+		padding: 0 3%;
+		margin: 0 3%;
+	}
+	.col4 {
+		float: right;
+		height: 700px;
+		width: 10%;
+		max-width: 200px;
+		background: $orange;
+		padding: 0 3%;
+		margin: 0 3%;
+	}
+	
+}
