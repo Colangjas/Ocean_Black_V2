@@ -22,39 +22,53 @@ $large                : 75em;
 
 //header ------------------------------------
 header {
-  img {
-    width: 95%;
-    margin: 2.5%;
-    max-width: 500px;
-    margin-bottom: 0;
+	  img {
+		width: 95%;
+		margin: 2.5%;
+		max-width: 500px;
+		margin-bottom: 0;
+	  }
+	 }
+  
+ //Navigation ------------------------------------
+.topnav {
+  background: lighten($darkblue, 15);
+  nav {
+  
+		li {
+			display: inline;
+			float: left;
+			text-decoration: none;
+		}
+  
+  @include at-breakpoint($small) {
+	@include horizontal-list;
   }
+    li {
+      i {
+        color: lighten($yellow, 20);
+        padding-right: .5em;
+      } //icons
 
-  .hero {
-    width: 100%;
-    @include at-breakpoint($medium) {
-	@include single-transition(all, 1s, ease-out);
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 450px;
-      @include background(linear-gradient(bottom left, rgba($darkerblue, .6), rgba($darkerblue, 0)),image-url('misc/helper.jpg'));
-      background-repeat: no-repeat;
-      background-position: center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      margin: 0 auto;
+      a {
+	@include single-transition(all, .5s, ease-out);
+        display: block;
+        text-decoration: none;
+        padding: 5px 10px;
+        color: $paleryellow;
+		
+		&:hover {
+			background: $orange;
+			a{
+				color: $yellow, 30;
+			}
+		}
+		
+      } //a
+    } //li
+  } //nav
+} // navigation
 
-      .branding {
-        position: absolute;
-        bottom: 0;
-      }
-
-    }
-  }
-
-}
 
 // Columns --------------------------------
 
@@ -66,7 +80,7 @@ header {
 	.col1 {
 		float: left;
 		height: 700px;
-		width: 10%;
+		width: 20%;
 		max-width: 200px;
 		background: $orange;
 		padding: 0 3%;
@@ -75,29 +89,39 @@ header {
 	.col2 {
 		float: left;
 		height: 700px;
-		width: 10%;
+		width: 20%;
 		max-width: 200px;
-		background: $orange;
+		background: $red;
 		padding: 0 3%;
 		margin: 0 3%;
 	}
 	.col3 {
 		float: left;
 		height: 700px;
-		width: 10%;
+		width: 20%;
 		max-width: 200px;
-		background: $orange;
+		background: $green;
 		padding: 0 3%;
 		margin: 0 3%;
 	}
 	.col4 {
-		float: right;
+		float: left;
 		height: 700px;
-		width: 10%;
+		width: 20%;
 		max-width: 200px;
-		background: $orange;
+		background: $cyan;
 		padding: 0 3%;
 		margin: 0 3%;
 	}
 	
-}
+} // columns
+
+// Footer -----------------------------
+
+footer {
+  color: $paleyellow;
+  background: lighten($darkblue, 3);
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+} // footer 
